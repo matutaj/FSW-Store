@@ -17,18 +17,18 @@ model Category {
   imageUrl String
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-  Produt   Produt[]
+  Produt   Product[]
 }
 
-model Produt {
+model Product {
   id              String  @id @default(uuid())
   name            String
   slug            String
   description     String
   basePrice       Decimal @db.Decimal(8, 2)
-  imageUrl        String
+  imageUrls        String[]
   categoryId      String
-  discountPercent Int     @default(0)
+  discountPercentage Int     @default(0)
 
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
