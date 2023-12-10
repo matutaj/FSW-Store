@@ -27,7 +27,7 @@ export default async function Home() {
     },
   });
   return (
-    <div className=" grap-8 flex flex-col">
+    <div className=" grap-8 flex flex-col py-8">
       <Image
         src="/banner-desconto.png"
         height={0}
