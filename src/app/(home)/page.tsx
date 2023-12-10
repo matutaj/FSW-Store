@@ -11,6 +11,14 @@ export default async function Home() {
       },
     },
   });
+
+  const keyboards = await prismaClient.product.findMany({
+    where: {
+      category: {
+        slug: "keyboards",
+      },
+    },
+  });
   return (
     <div>
       <Image
@@ -25,6 +33,7 @@ export default async function Home() {
         <Categories />
       </div>
       <div className="mt-8">
+        <p className=" pl-5 font-bold uppercase">Mouses</p>
         <ProductList products={deals} />
       </div>
 
@@ -36,6 +45,11 @@ export default async function Home() {
         sizes="100vw"
         alt="Até 55% de desconto em mouses"
       />
+
+      <div className="mt-8">
+        <p className=" pl-5 font-bold uppercase">Teclados</p>
+        <ProductList products={keyboards} />
+      </div>
     </div>
   );
 }
