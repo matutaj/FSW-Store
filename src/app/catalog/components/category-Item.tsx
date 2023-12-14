@@ -23,7 +23,6 @@ const CategoryItem = ({ category }: CategoeyItemProps) => {
             }}
           />
         </div>
-
         <div className=" rounded-bl.lg rounded-br-lg bg-accent  py-2">
           <p className="text-center text-sm font-semibold">{category.name}</p>
         </div>
