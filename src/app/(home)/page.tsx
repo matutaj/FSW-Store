@@ -6,16 +6,16 @@ import { prismaClient } from "@/lib/prisma";
 export default async function Home() {
   const deals = await prismaClient.product.findMany({
     where: {
-      category: {
-        slug: "mouses",
+      discountPercentage: {
+        gt: 0,
       },
     },
   });
 
-  const keyboards = await prismaClient.product.findMany({
+  const mouses = await prismaClient.product.findMany({
     where: {
       category: {
-        slug: "keyboards",
+        slug: "mouses",
       },
     },
   });
@@ -40,7 +40,7 @@ export default async function Home() {
         <Categories />
       </div>
       <div className="mt-8">
-        <p className=" pl-5 font-bold uppercase">Mouses</p>
+        <p className=" pl-5 font-bold uppercase">Ofertas</p>
         <ProductList products={deals} />
       </div>
 
@@ -54,8 +54,8 @@ export default async function Home() {
       />
 
       <div className="mt-8">
-        <p className=" pl-5 font-bold uppercase">Teclados</p>
-        <ProductList products={keyboards} />
+        <p className=" pl-5 font-bold uppercase">Mouses</p>
+        <ProductList products={mouses} />
       </div>
 
       <Image
