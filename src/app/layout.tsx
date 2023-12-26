@@ -23,11 +23,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex h-full flex-col">
           <AuthProvider>
-            <CartProvider>
-              <Header />
+           
+            <Header />
               <div className="flex-1"> {children}</div>
               <Footer />
-            </CartProvider>
           </AuthProvider>
         </div>
       </body>
