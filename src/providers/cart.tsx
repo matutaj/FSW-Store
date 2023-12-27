@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import { Product } from "@prisma/client";
 import { ReactNode, createContext } from "react";
 
