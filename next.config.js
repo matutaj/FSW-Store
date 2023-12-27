@@ -2,7 +2,7 @@
 const nextConfig = {
   // reactStrictMode:true,
   images: {
-    domains: ["fsw-store.s3.sa-east-1.amazonaws.com"],
+    domains: ["fsw-store.s3.sa-easttre-1.amazonaws.com"],
   },
   experimental: {
     serverActions: true,
